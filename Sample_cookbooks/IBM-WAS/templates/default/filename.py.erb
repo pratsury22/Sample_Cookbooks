@@ -1,0 +1,4 @@
+AdminTask.createCluster('[-clusterConfig [-clusterName TestCluster] -replicationDomain [-createDomain true]]')
+AdminTask.createClusterMember('[-clusterName TestCluster -memberConfig [-memberNode TestNode01 -memberName TestServer01 -memberWeight 2 -replicatorEntry true] -firstMember [-templateName default -nodeGroup DefaultNodeGroup -coreGroup DefaultCoreGroup]]')
+AdminTask.createClusterMember('[-clusterName TestCluster -memberConfig [-memberNode TestNode02 -memberName TestServer02 -memberWeight 2 -replicatorEntry true]]')
+AdminConfig.save()
